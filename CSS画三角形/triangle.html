@@ -6,6 +6,14 @@
     <title>Document</title>
     <style>
         .triangle{
+            display:flex;
+            justify-content: center;
+        }
+        .transtriangle{
+                        display:flex;
+            justify-content: center;
+        }
+        .fourtriangle{
             
             width:0;
             height:0;
@@ -14,6 +22,76 @@
             border-top: 50px solid green;
             border-bottom: 50px solid blue;
         }
+        .uptriangle{
+            width:0;
+            height:0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 50px solid transparent;
+            border-bottom: 100px solid blue;
+        }
+        .downtriangle{
+            width:0;
+            height:0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 50px solid green;
+            border-bottom: 100px solid transparent;
+        }
+        .lefttriangle{
+            width:0;
+            height:0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid pink;
+            border-top: 50px solid transparent;
+            border-bottom: 100px solid transparent;
+        }
+        .righttriangle{
+            width:0;
+            height:0;
+            border-left: 50px solid red;
+            border-right: 50px solid transparent;
+            border-top: 50px solid transparent;
+            border-bottom: 100px solid transparent;
+        }
+        .rot1{
+            transform:rotate(60deg)
+        }
+        .rot2{
+            transform:rotate(135deg)
+        }
+        .rot3{
+            transform:rotate(360deg)
+        }
+        .rot4{
+            transform:rotate(180deg)
+        }
+
+        .heart {
+            width: 100px;
+            height: 90px;
+            background: red;
+            position: relative;
+            transform: rotate(-45deg);
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 90px;
+            background: red;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
     </style>
     <script defer>
 
@@ -21,7 +99,38 @@
 </head>
 <body>
     <div class="triangle">
-        这是一个三角形
+        <div class="fourtriangle">
+            
+        </div>
+        <div class="uptriangle">
+            
+        </div>
+        <div class="downtriangle">
+            
+        </div>
+        <div class="lefttriangle">
+            
+        </div>
+        <div class="righttriangle">
+            
+        </div>
+    </div>
+    <div class="transtriangle">
+        <div class="uptriangle rot1">
+            
+        </div>
+        <div class="downtriangle rot2">
+            
+        </div>
+        <div class="lefttriangle rot3">
+            
+        </div>
+        <div class="righttriangle rot4">
+            
+        </div>
+    </div>
+    <div class="heart">
+
     </div>
     <button>
         这是一个按钮
